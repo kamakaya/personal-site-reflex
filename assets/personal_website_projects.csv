@@ -1,0 +1,5 @@
+name,url,technologies
+Discord Clone,https://github.com/kamakaya/discord-clone,Next.js;Prisma;Tailwind;Google Cloud;Docker;MySQL
+Personal Website,#,Python;Reflex
+OTP API,https://github.com/kamakaya/otp-api,Python;Flask;Google Cloud;Docker
+User Management REST API,https://github.com/kamakaya/authorized-users-api,Python;Flask;Google Cloud;MySQL
