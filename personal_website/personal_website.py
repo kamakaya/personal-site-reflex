@@ -7,7 +7,10 @@ def index() -> rx.Component:
 
     return rx.fragment(
         rx.box(
-            rx.image(src="/header_background.jpg", html_width="100%"),
+            rx.image(
+                src="/header_background.jpg",
+                html_width="100%"
+            ),
             rx.hstack(
                 rx.image(
                     src="/rommel_headshot.png",
@@ -75,7 +78,13 @@ def index() -> rx.Component:
                     height="1em",
                     width="1em",
                 ),
-                rx.link("linkedin.com/in/kamakaya", font_size="1em", ml=5, href="https://www.linkedin.com/in/kamakaya/"),
+                rx.link(
+                    "linkedin.com/in/kamakaya", 
+                    font_size="1em", 
+                    ml=5, 
+                    href="https://www.linkedin.com/in/kamakaya/",
+                    is_external=True
+                ),
                 ml=40,
                 padding_top="0.5%"
             ),
@@ -91,13 +100,11 @@ def index() -> rx.Component:
             rx.list(                
                 rx.foreach(ProjectsState.projects, project_item) 
             ),
-            rx.divider()
+            padding_bottom="3em"
         )
     )
 
 # Add state and page to the app.
 app = rx.App()
-# ProjectsState.import_projects_from_csv()
-# ProjectsState.add_projects_to_dict()
 app.add_page(index)
 app.compile()

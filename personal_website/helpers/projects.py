@@ -53,7 +53,6 @@ def project_item(project: dict):
                     variant="ghost",
                     justify_content="flex-start",
                     width="275px",
-
                 ),
                 href=project["project_url"].to_string(json=False),
                 is_external=True
