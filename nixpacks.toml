@@ -20,7 +20,7 @@ providers = ['python']
 # export frontend phase
 [phases.export]
     dependsOn = ['init'] # run after init
-    cmds = ['reflex export --frontend-only --no-zip'] # export the frontend to a static folder
+    cmds = ['reflex export --frontend-only --no-zip --loglevel debug'] # export the frontend to a static folder
 
 # install caddy phase
 [phases.caddy]
