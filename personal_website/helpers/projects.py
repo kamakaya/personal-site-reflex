@@ -24,8 +24,8 @@ class ProjectsState(rx.State):
         },
         {
             "project_name": "Personal Website",
-            "project_url": "https://github.com/kamakaya/discord-clone",
-            "technologies": ["Python", "Reflex"]
+            "project_url": "https://github.com/kamakaya/personal-site-reflex",
+            "technologies": ["Python", "Reflex", "Railway.app"]
         },
         {
             "project_name": "OTP API",
