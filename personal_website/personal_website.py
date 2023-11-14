@@ -2,6 +2,7 @@ from rxconfig import config
 import reflex as rx
 
 from .helpers.projects import project_item, ProjectsState
+from .helpers.certifications import get_certifications
 
 def index() -> rx.Component:
 
@@ -100,6 +101,25 @@ def index() -> rx.Component:
             rx.list(                
                 rx.foreach(ProjectsState.projects, project_item) 
             ),
+            # padding_bottom="3em"
+        ),
+        rx.box(
+            rx.heading(
+                "Certifications", 
+                font_size="2em",
+                align="left",
+                ml=40,
+                padding_top="3%",
+            ),
+            rx.container(
+                rx.hstack(
+                    get_certifications("terraform"),
+                    get_certifications("ace")
+                ),
+                center_content=True,
+            )
+        ),
+        rx.box(
             padding_bottom="3em"
         )
     )
