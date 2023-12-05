@@ -1,10 +1,15 @@
 from rxconfig import config
 import reflex as rx
+import os
 
 from .helpers.projects import project_item, ProjectsState
 from .helpers.certifications import get_certifications
 
+resume_url = "RESUME_URL"
+
 def index() -> rx.Component:
+
+    RESUME_URL = os.environ[resume_url] if resume_url in os.environ else "https://drive.google.com/file/d/1EiMvYfULcOgO7esFHOcfvuBCgZsPfMIs/view?usp=sharing"
 
     return rx.fragment(
         rx.box(
@@ -35,7 +40,7 @@ def index() -> rx.Component:
                         position="absolute",
                         right=40,
                     ),
-                    href="https://drive.google.com/file/d/1MYfNGVdIuYdrYCUfOMOxcs1WUHP6mHto/view?usp=drive_link",
+                    href=RESUME_URL
                 ),
             ),
         ),
